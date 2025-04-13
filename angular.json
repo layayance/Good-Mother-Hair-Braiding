@@ -88,10 +88,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "good-mother-hair-braiding:build:production"
+              "buildTarget": "good-mother-hair-braiding:build:production"
             },
             "development": {
-              "browserTarget": "good-mother-hair-braiding:build:development"
+              "buildTarget": "good-mother-hair-braiding:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,7 +99,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "good-mother-hair-braiding:build"
+            "buildTarget": "good-mother-hair-braiding:build"
           }
         },
         "test": {
