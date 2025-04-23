@@ -1,0 +1,17 @@
+<mat-toolbar color="accent">
+  <h1>{{ 'header.title' | translate }}</h1>
+  <p>{{ 'header.description' | translate }}</p>
+
+  <nav class="main-nav">
+    <a routerLink="/home">{{ 'nav.home' | translate }}</a>
+    <a routerLink="/services">{{ 'nav.services' | translate }}</a>
+    <a routerLink="/contact">{{ 'nav.contact' | translate }}</a>
+  </nav>
+
+  <div class="tolls">
+    <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
+    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 Français</button>
+    <button mat-flat-button (click)="switchLang('en')">🇬🇧 English</button>
+    <button mat-flat-button (click)="switchLang('es')">🇪🇸 Español</button>
+  </div>
+</mat-toolbar>

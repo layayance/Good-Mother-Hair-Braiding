@@ -1,0 +1,18 @@
+{
+  "home": {
+    "title": "Bienvenue chez Good Mother Hair Braiding",
+    "description": "Nous vous accueillons avec amour et style."
+  },
+  "header": {
+    "title": "Good Mother Hair Braiding",
+    "description": "Salon de coiffure afro à Trenton"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Nos Services",
+    "contact": "Contact"
+  },
+  "ui": {
+    "bwMode": "Noir & Blanc"
+  }
+}

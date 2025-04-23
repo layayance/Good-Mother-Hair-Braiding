@@ -1,25 +1,13 @@
 import { Component } from '@angular/core';
-import { LanguageService } from "./services/language.service";
-import {ThemeService} from "./services/theme.service";
+import { RouterModule } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterModule, SharedModule, CoreModule],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'good-mother-hair-braiding';
-  constructor(public lanService: LanguageService,
-              public themeService: ThemeService) {}
-
-  switchLang(lang: 'fr' | 'en'){
-    this.lanService.setLang(lang);
-  }
-  t(texts: { fr: string; en: string;  }): string {
-    return this.lanService.translate(texts);
-  }
-  toggleGrayscale(){
-    this.themeService.toggleGrayscale();
-  }
-}
+export class AppComponent {}
