@@ -1,2 +1,71 @@
-<p>contact works!</p>
-<h1> Yaya</h1>
+<mat-stepper [linear]="isLinear" #stepper>
+
+  <!-- STEP 1 : Nom -->
+  <mat-step [stepControl]="premierFormulaireGroupe">
+    <form [formGroup]="premierFormulaireGroupe">
+      <ng-template matStepLabel>Nom</ng-template>
+
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="premierCtrl" required>
+      </mat-form-field>
+
+      <button mat-button matStepperNext>Next</button>
+    </form>
+  </mat-step>
+
+  <!-- STEP 2 : Rendez-vous -->
+  <mat-step [stepControl]="troisiemeFormGroup">
+    <form [formGroup]="troisiemeFormGroup">
+      <ng-template matStepLabel>Rendez-vous</ng-template>
+
+      <mat-form-field>
+        <mat-label>Date souhaitée</mat-label>
+        <input matInput type="date" formControlName="date" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Heure</mat-label>
+        <input matInput type="time" formControlName="heure" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Type de coiffure</mat-label>
+        <input matInput formControlName="coiffure" required>
+      </mat-form-field>
+
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </form>
+  </mat-step>
+
+  <!-- STEP 3 : Adresse -->
+  <!-- <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Adresse</ng-template>
+
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="secondCtrl" required>
+      </mat-form-field>
+
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </form>
+  </mat-step> -->
+
+  <!-- STEP 4 : Done -->
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+
+    <button mat-button matStepperPrevious>Back</button>
+
+    <button mat-raised-button color="primary"
+      (click)="sendToWhatsApp()"
+      [disabled]="premierFormulaireGroupe.invalid
+               || troisiemeFormGroup.invalid">
+      Envoyer sur WhatsApp
+    </button>
+  </mat-step>
+
+</mat-stepper>

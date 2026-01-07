@@ -1,17 +1,41 @@
-<mat-toolbar color="accent">
-  <h1>{{ 'header.title' | translate }}</h1>
-  <p>{{ 'header.description' | translate }}</p>
+<mat-toolbar color="accent" class="main-header">
 
-  <nav class="main-nav">
-    <a routerLink="/home">{{ 'nav.home' | translate }}</a>
-    <a routerLink="/services">{{ 'nav.services' | translate }}</a>
-    <a routerLink="/contact">{{ 'nav.contact' | translate }}</a>
+  <!-- LOGO / TITLE -->
+  <div class="logo">
+    <h1>{{ 'header.title' | translate }}</h1>
+    <p class="h-description">{{ 'header.description' | translate }}</p>
+  </div>
+
+  <!-- BURGER BUTTON (mobile) -->
+  <button
+    mat-icon-button
+    class="burger"
+    (click)="toggleMenu()"
+    aria-label="Menu" >☰
+  </button>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav" [class.open]="isMenuOpen">
+    <a routerLink="/home" (click)="closeMenu()">{{ 'nav.home' | translate }}</a>
+    <a routerLink="/services" (click)="closeMenu()">{{ 'nav.services' | translate }}</a>
+    <a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
+    <a routerLink="/dashboard" (click)="closeMenu()">Dashboard</a>
+
+    <!-- TOOLS INSIDE MENU (mobile) -->
+    <div class="tools mobile-tools">
+      <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
+      <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
+      <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
+      <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
+    </div>
   </nav>
 
-  <div class="tolls">
+  <!-- TOOLS DESKTOP ONLY -->
+  <div class="tools desktop-tools">
     <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
-    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 Français</button>
-    <button mat-flat-button (click)="switchLang('en')">🇬🇧 English</button>
-    <button mat-flat-button (click)="switchLang('es')">🇪🇸 Español</button>
+    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
+    <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
+    <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
   </div>
+
 </mat-toolbar>

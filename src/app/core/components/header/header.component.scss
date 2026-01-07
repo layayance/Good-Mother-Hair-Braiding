@@ -1,44 +1,73 @@
 .main-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 1rem;
   background-color: #eee;
+}
 
-  .logo {
-    flex: 1 1 100%;
-    text-align: center;
-    font-weight: bold;
+/* LOGO */
+.logo {
+  flex: 1;
+  text-align: left;
+}
+
+.h-description{
+top: 1;
+text-align: center;
+}
+/* BURGER BUTTON */
+.burger {
+  display: none;
+  font-size: 1.6rem;
+  top: 1;
+}
+
+/* NAVIGATION DESKTOP */
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* TOOLS */
+.tools {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mobile-tools {
+  display: none;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+
+  .burger {
+    display: block;
+  }
+
+  .desktop-tools {
+    display: none;
   }
 
   .main-nav {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex: 1 1 100%;
-    margin-top: 0.5rem;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
   }
 
-  .tools {
+  .main-nav.open {
     display: flex;
+  }
+
+  .mobile-tools {
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
-    justify-content: center;
-    flex: 1 1 100%;
-    margin-top: 0.5rem;
-
-    button {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      background-color: #333;
-      color: white;
-
-      &:hover {
-        background-color: #555;
-      }
-    }
+    margin-top: 1rem;
   }
 }

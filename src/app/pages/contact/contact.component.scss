@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  padding-top: 140px; // espace pour le header mobile
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  :host {
+    padding-top: 180px;
+  }
+}
