@@ -1,36 +1,20 @@
+<!-- LOGO / TITLE -->
 <mat-toolbar color="accent" class="main-header">
-
-  <!-- LOGO / TITLE -->
-  <div class="logo">
-    <h1>{{ 'header.title' | translate }}</h1>
-    <p class="h-description">{{ 'header.description' | translate }}</p>
+  <div class="header-left">
+    <h1 class="logo-title">Good Mother Hair Braiding</h1>
+    <p class="h-description">Salon de coiffure afro à Trenton</p>
   </div>
 
-  <!-- BURGER BUTTON (mobile) -->
-  <button
-    mat-icon-button
-    class="burger"
-    (click)="toggleMenu()"
-    aria-label="Menu" >☰
-  </button>
+      <!-- TOOLS INSIDE MENU (mobile) -->
 
-  <!-- NAVIGATION -->
   <nav class="main-nav" [class.open]="isMenuOpen">
     <a routerLink="/home" (click)="closeMenu()">{{ 'nav.home' | translate }}</a>
     <a routerLink="/services" (click)="closeMenu()">{{ 'nav.services' | translate }}</a>
     <a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
     <a routerLink="/dashboard" (click)="closeMenu()">Dashboard</a>
-
-    <!-- TOOLS INSIDE MENU (mobile) -->
-    <div class="tools mobile-tools">
-      <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
-      <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
-      <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
-      <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
-    </div>
   </nav>
 
-  <!-- TOOLS DESKTOP ONLY -->
+    <!-- TOOLS DESKTOP ONLY -->
   <div class="tools desktop-tools">
     <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
     <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
@@ -38,4 +22,13 @@
     <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
   </div>
 
-</mat-toolbar>
+    <!-- BURGER BUTTON (mobile) -->
+
+  <button
+    mat-icon-button
+    class="burger"
+    (click)="toggleMenu()"
+    aria-label="Menu" >☰
+  </button>
+ 
+</mat-toolbar> 
