@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {SharedModule} from "../shared/shared.module";
 import {HeaderComponent} from "./components/header/header.component";
 import {RouterLink} from "@angular/router";
+import { FooterComponent } from "./components/footer/footer.component";
 
 
 @NgModule({
@@ -13,10 +14,12 @@ import {RouterLink} from "@angular/router";
     CommonModule,
     SharedModule,
     RouterLink,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class CoreModule { }

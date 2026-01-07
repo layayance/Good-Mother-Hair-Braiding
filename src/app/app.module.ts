@@ -8,6 +8,7 @@ import {SharedModule} from "./shared/shared.module";
 import {CoreModule} from "./core/core.module";
 import {RouterModule} from "@angular/router";
 import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { DashboardModule } from './pages/dashboard/dashboard.module';
     BrowserAnimationsModule,
     SharedModule,
     CoreModule,
-    DashboardModule
+    DashboardModule,
+    FooterComponent
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
