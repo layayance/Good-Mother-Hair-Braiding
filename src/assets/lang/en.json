@@ -14,5 +14,9 @@
   },
   "ui": {
     "bwMode": "Black & White"
+  },
+  "footer": {
+    "copyright": "© {{year}} Good Mother Hair Braiding. All rights reserved.",
+    "creator": "Created by"
   }
 }

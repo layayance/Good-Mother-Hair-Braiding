@@ -14,5 +14,9 @@
   },
   "ui": {
     "bwMode": "Noir & Blanc"
+  },
+  "footer": {
+    "copyright": "© {{year}} Good Mother Hair Braiding. Tous droits réservés.",
+    "creator": "Créé par Yayou"
   }
 }

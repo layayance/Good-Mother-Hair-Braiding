@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { TranslateService,TranslateModule } from '@ngx-translate/core';
 
-/**
- * @title Toolbar with just text
- */
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 
 })
 export class FooterComponent {
+  constructor(private translate: TranslateService ){}
+
   currentYear = new Date().getFullYear();
+  currentLang = this.translate.currentLang;
+
 
 }
