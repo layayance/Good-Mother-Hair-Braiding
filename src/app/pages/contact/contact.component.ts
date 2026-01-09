@@ -1,58 +1,74 @@
-import { Component, inject } from '@angular/core';
-// import { SharedModule } from '../../shared/';
+import { Component, inject, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { SharedModule } from '../../shared/shared.module';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
-/**
- * @title Aperçu du Stepper
- */ 
+/** @title Datepicker with custom date classes */
 
 @Component({
   selector: 'app-contact',
-  standalone: true,
-  imports: [SharedModule],
+  imports: [SharedModule,MatFormFieldModule, MatInputModule, MatDatepickerModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactComponent {
-  private _formBuilder = inject(FormBuilder);
+  private fb = inject(FormBuilder);
 
-  premierFormulaireGroupe = this._formBuilder.group ({
-     premierCtrl : [ '' , Validators.required],
+  // ÉTAPE 1 — Informations client (nom)
+  premierFormulaireGroupe = this.fb.group({
+    premierCtrl: ['', Validators.required],
   });
-  secondFormGroup = this._formBuilder.group ({
-     secondCtrl : [ '' , Validators.required],
+
+  // ÉTAPE 2 — Choix de la coiffure
+  coiffureFormGroup = this.fb.group({
+    type: ['', Validators.required],
+    details: [''], // optionnel
   });
-  troisiemeFormGroup = this._formBuilder.group({
+
+  // ÉTAPE 3 — Date et heure du rendez-vous
+  rdvFormGroup = this.fb.group({
     date: ['', Validators.required],
     heure: ['', Validators.required],
-    coiffure: ['', Validators.required],
   });
-  isLinear = false ;
 
+  // Mise en forme du calendrier (jours mis en évidence)
+  dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
+    // Only highligh dates inside the month view.
+    if (view === 'month') {
+      const date = cellDate.getDate();
+
+      // Highlight the 1st and 20th day of each month.
+      return date === 1 || date === 20 ? 'example-custom-date-class' : '';
+    }
+
+    return '';
+  };
+
+  isLinear = false;
+
+  // Génère le message et ouvre WhatsApp avec les informations du formulaire
   sendToWhatsApp() {
-  const phoneNumber = '759236988'; // Numero du salon 
+    // Numéro WhatsApp du salon (format international obligatoire)
+    const phoneNumber = '1759236988'; // format international WhatsApp
 
-  const nom = this.premierFormulaireGroupe.value.premierCtrl;
-  
-  
-  const date = this.troisiemeFormGroup.value.date;
-  const heure = this.troisiemeFormGroup.value.heure;
-  const coiffure = this.troisiemeFormGroup.value.coiffure;
+    const nom = this.premierFormulaireGroupe.value.premierCtrl;
+    const coiffure = this.coiffureFormGroup.value.type;
+    const details = this.coiffureFormGroup.value.details || 'Aucun détail';
+    const date = this.rdvFormGroup.value.date;
+    const heure = this.rdvFormGroup.value.heure;
 
-  
-  const message = `
-  Bonjour 👋 Je souhaite prendre contact avec Good Mother Hair Braiding.
+    // Message envoyé automatiquement sur WhatsApp
+    const message = `Bonjour 👋\n\nJe m'appelle ${nom}.\n\nJe souhaite prendre contact avec Good Mother Hair Braiding.\n\nCoiffure : 
+    ${coiffure}\nDétails : ${details}\nDate souhaitée : ${date} à ${heure}`;
+    
 
-  Nom: ${nom}
-  Date souhaitéé:${date}
-  Type de coiffure: ${coiffure}
-  Heure: ${heure}`;
-
-  const encodedMessage = encodeURIComponent(message);
-  const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-  window.open(url, '_blank');
-}
-
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
 }

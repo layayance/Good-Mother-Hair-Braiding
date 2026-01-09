@@ -9,6 +9,7 @@ import {CoreModule} from "./core/core.module";
 import {RouterModule} from "@angular/router";
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './core/components/footer/footer.component';
     SharedModule,
     CoreModule,
     DashboardModule,
-    FooterComponent
+    FooterComponent,
+    MatNativeDateModule
     
   ],
   providers: [],

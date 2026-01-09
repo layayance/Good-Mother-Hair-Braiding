@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MaterialModule} from "./material.module";
 import {TranslateModule} from "@ngx-translate/core";
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatStepperModule } from '@angular/material/stepper';
+
+
 
 
 
@@ -11,11 +15,15 @@ import {TranslateModule} from "@ngx-translate/core";
   imports: [
     CommonModule,
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule, 
+    MatStepperModule
   ],
   exports: [
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule,
+    MatStepperModule
   ]
 })
 export class SharedModule { }
