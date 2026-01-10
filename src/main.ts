@@ -9,12 +9,15 @@ import { CoreModule } from './app/core/core.module';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { appConfig } from './app/aap.config';
+
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/lang/', '.json');
 }
 
-bootstrapApplication(AppComponent, {
+bootstrapApplication(AppComponent, appConfig){
   providers: [
     importProvidersFrom(
       RouterModule.forRoot(routes),
