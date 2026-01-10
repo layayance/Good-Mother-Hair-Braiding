@@ -28,9 +28,8 @@ export class HeaderComponent {
 
   toggleMenu() {
   this.isMenuOpen = !this.isMenuOpen;
-  console.log('Menu toggled');
-  this.isMenuOpen = !this.isMenuOpen;
-  }
+  console.log('Menu toggled:', this.isMenuOpen);
+}
 
   closeMenu() {
   this.isMenuOpen = false;

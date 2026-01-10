@@ -55,7 +55,7 @@ export class ContactComponent {
   // Génère le message et ouvre WhatsApp avec les informations du formulaire
   sendToWhatsApp() {
     // Numéro WhatsApp du salon (format international obligatoire)
-    const phoneNumber = '1759236988'; // format international WhatsApp
+    const phoneNumber = '759236988'; // format international WhatsApp
 
     const nom = this.premierFormulaireGroupe.value.premierCtrl;
     const coiffure = this.coiffureFormGroup.value.type;
