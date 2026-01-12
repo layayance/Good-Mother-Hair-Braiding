@@ -2,7 +2,7 @@
 <mat-toolbar color="accent" class="main-header">
   <div class="header-left">
     <h1 class="logo-title">Good Mother Hair Braiding</h1>
-    <p class="h-description">Salon de coiffure afro à Trenton</p>
+    <p class="h-description">{{ 'header.description' | translate}}</p>
   </div>
 
       <!-- TOOLS INSIDE MENU (mobile) -->
@@ -12,6 +12,8 @@
     <a routerLink="/services" (click)="closeMenu()">{{ 'nav.services' | translate }}</a>
     <a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
     <a routerLink="/dashboard" (click)="closeMenu()">Dashboard</a>
+    <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
+
   </nav>
 
     <!-- TOOLS DESKTOP ONLY -->

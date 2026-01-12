@@ -1,7 +1,23 @@
 {
   "home": {
     "title": "Bienvenue chez Good Mother Hair Braiding",
-    "description": "Nous vous accueillons avec amour et style."
+    "description": "Nous vous accueillons avec amour et style.",
+    "subtitle": "Spécialistes des tresses africaines et coiffures modernes",
+    "cta": {
+      "services": "Voir nos services",
+      "contact": "Prendre rendez-vous"
+    },
+    "why": {
+      "title": "Pourquoi nous choisir ?",
+      "feature1": "Coiffeuses professionnelles",
+      "feature2": "Produits de haute qualité",
+      "feature3": "Accueil chaleureux et convivial",
+      "feature4": "Prix abordables"
+    },
+    "location": {
+      "title": "Nous trouver",
+      "address": "208 Perry St, Trenton"
+    }
   },
   "header": {
     "title": "Good Mother Hair Braiding",

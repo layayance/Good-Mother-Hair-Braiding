@@ -5,7 +5,6 @@ import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 
 /** @title Datepicker with custom date classes */
 

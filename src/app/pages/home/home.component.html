@@ -1,30 +1,30 @@
 <section class="hero">
-  <h1>Good Mother Hair Braiding</h1>
+<h1>Good Mother Hair Braiding</h1>
   <p class="subtitle">
-    Spécialiste des tresses africaines et coiffures modernes
+    {{ 'home.subtitle' | translate }}
   </p>
 
   <div class="hero-buttons">
     <a routerLink="/services" class="btn primary">
-      Voir nos services
+      {{ 'home.cta.services' | translate }}
     </a>
     <a routerLink="/contact" class="btn secondary">
-      Prendre rendez-vous
+      {{ 'home.cta.contact' | translate }}
     </a>
   </div>
 </section>
 
 <section class="about">
-  <h2>Pourquoi nous choisir ?</h2>
+  <h2>{{ 'home.why.title' | translate }}</h2>
   <div class="features">
-    <div>💇‍♀️ Coiffeuses professionnelles</div>
-    <div>✨ Produits de qualité</div>
-    <div>🤝 Accueil chaleureux</div>
-    <div>💰 Prix abordables</div>
+    <div>💇‍♀️ {{ 'home.why.feature1' | translate }}</div>
+    <div>✨ {{ 'home.why.feature2' | translate }}</div>
+    <div>🤝 {{ 'home.why.feature3' | translate }}</div>
+    <div>💰 {{ 'home.why.feature4' | translate }}</div>
   </div>
 </section>
 
 <section class="location">
-  <h2>Nous trouver</h2>
-  <p>📍 208 Perry St, Trenton</p>
+  <h2>{{ 'home.location.title' | translate }}</h2>
+  <p>📍 {{ 'home.location.address' | translate }}</p>
 </section>
