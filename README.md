@@ -8,7 +8,7 @@
 Site web professionnel pour un **salon de coiffure afro** basé à **Trenton (USA)**.  
 Application web **statique, responsive et multilingue**, développée avec **Angular & Angular Material**.
 
-🔗 **Démo en ligne** : *
+🔗 **Démo en ligne** : https://layayance.github.io/good-mother-hair-braiding/
 🔗 **Repository GitHub** : https://github.com/layayance/good-mother-hair-braiding
 
 ---
