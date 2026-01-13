@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SharedModule} from "./shared/shared.module";
 import {CoreModule} from "./core/core.module";
 import {RouterModule} from "@angular/router";
-import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { DashboardModule } from './pages/galerie/dashboard.module';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { MatNativeDateModule } from '@angular/material/core';
 

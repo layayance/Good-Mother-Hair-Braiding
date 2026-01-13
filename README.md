@@ -1,28 +1,46 @@
-# GoodMotherHairBraiding
+# 💇🏾‍♀️ Good Mother Hair Braiding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+Site web professionnel pour un **salon de coiffure afro** basé à **Trenton (USA)**.  
+Application web **statique, responsive et multilingue**, développée avec **Angular & Angular Material**.
 
-## Development server
+🔗 **Démo en ligne** : *
+🔗 **Repository GitHub** : https://github.com/layayance/good-mother-hair-braiding
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## ✨ Fonctionnalités
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 🌍 Site multilingue (Français 🇫🇷 / Anglais 🇬🇧 / Espagnol 🇪🇸)
+- 📱 Design responsive (mobile, tablette, desktop)
+- 🧭 Navigation fluide (Home, Services, Contact, Galerie)
+- 📅 Formulaire de contact avec prise de rendez-vous
+- 📲 Envoi direct sur WhatsApp
+- 🌓 Mode Noir & Blanc
+- 🖼️ Galerie photos avec cards harmonisées
+- ⚡ Architecture Angular standalone + lazy loading
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Technologies utilisées
 
-## Running unit tests
+- Angular (standalone components)
+- Angular Material
+- TypeScript
+- SCSS
+- ngx-translate (internationalisation)
+- WhatsApp API (wa.me)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+🚀 Installation & lancement
 
-## Running end-to-end tests
+1️⃣ Cloner le projet
+git clone https://github.com/layayance/good-mother-hair-braiding.git
+cd good-mother-hair-braiding
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2️⃣ Installer les dépendances
+npm install
 
-## Further help
+3️⃣ Lancer le serveur
+ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Bonne-Mère-Tresse-Cheveux
+➡️ Ouvre ensuite :
+http://localhost:4200
