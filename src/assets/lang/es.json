@@ -26,7 +26,9 @@
   "nav": {
     "home": "Inicio",
     "services": "Nuestros Servicios",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "galerie": "Galería"
+
   },
   "ui": {
     "bwMode": "Modo blanco y negro"
