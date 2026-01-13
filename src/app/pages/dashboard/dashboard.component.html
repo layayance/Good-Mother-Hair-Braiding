@@ -1,20 +1,12 @@
-<div class="dashboard">
-  <h1>Bienvenue chez Good Mother Hair Braiding ✨</h1>
+<div class="coiffures">
+  <h1 class="title">Nos styles populaires ✨</h1>
 
   <div class="stats">
-    <div class="card">
-      <h2>Rendez-vous aujourd'hui</h2>
-      <p>8 clients</p>
-    </div>
-
-    <div class="card">
-      <h2>Clients réguliers</h2>
-      <p>25 clients</p>
-    </div>
-
-    <div class="card">
-      <h2>Prochain rendez-vous</h2>
-      <p>14h00 - Mme Johnson</p>
+    <div class="card" *ngFor="let item of coiffures">
+      <figure class="image-card">
+        <img [src]="item.img" [alt]="item.alt">
+        <figcaption>{{ item.label }}</figcaption>
+      </figure>
     </div>
   </div>
 </div>
