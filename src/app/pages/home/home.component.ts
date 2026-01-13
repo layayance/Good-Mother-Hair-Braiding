@@ -6,11 +6,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    TranslateModule
-  ],
+  imports: [ CommonModule,RouterModule,TranslateModule ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

@@ -1,5 +1,10 @@
 # 💇🏾‍♀️ Good Mother Hair Braiding
 
+![Angular](https://img.shields.io/badge/Angular-17-red?logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript)
+![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-brightgreen?logo=github)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 Site web professionnel pour un **salon de coiffure afro** basé à **Trenton (USA)**.  
 Application web **statique, responsive et multilingue**, développée avec **Angular & Angular Material**.
 

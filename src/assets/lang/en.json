@@ -35,5 +35,26 @@
   "footer": {
     "copyright": "© {{year}} Good Mother Hair Braiding. All rights reserved.",
     "creator": "Created by Yayou"
+  },
+  "services": {
+  "title": "Our Services",
+  "items": {
+    "braids": {
+      "title": "African braids",
+      "description": "Box braids, knotless braids, cornrows…"
+    },
+    "weaves": {
+      "title": "Weaves",
+      "description": "Open, closed, closure, frontal"
+    },
+    "womenKids": {
+      "title": "Women & kids hairstyles",
+      "description": "Modern and traditional styles"
+    },
+    "care": {
+      "title": "Hair care",
+      "description": "Treatments for natural and relaxed hair"
+    }
   }
+}
 }
