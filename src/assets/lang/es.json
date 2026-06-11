@@ -37,6 +37,56 @@
     "copyright": "© {{year}} Good Mother Hair Braiding. Todos los derechos reservados.",
     "creator": "Creado por Yayou"
   },
+"appointment": {
+  "firstName": "Nombre",
+  "step1": "Información personal",
+  "step2": "Peinado",
+  "appointment": "Cita",
+  "confirmation": "Confirmación",
+
+  "hairType": "Tipo de peinado",
+  "details": "Detalles (opcional)",
+
+  "desiredDate": "Fecha deseada",
+  "desiredTime": "Hora deseada",
+
+  "whatsappMessage": "Vas a enviar tu solicitud por WhatsApp.",
+  "sendToWhatsApp": "Enviar por WhatsApp",
+
+  "back": "Atrás",
+  "next": "Siguiente",
+
+  "options": {
+    "cornrowsSimple": "Trenzas pegadas simples",
+    "cornrowsComplex": "Trenzas pegadas complejas",
+    "braidsSimple": "Trenzas simples",
+    "braidsManyHair": "Trenzas (mucho cabello)",
+    "afroVolume": "Afro / gran volumen",
+    "other": "Otro"
+  }
+},
+  "coiffures": {
+    "elegant": {
+      "label": "Elegante",
+      "alt": "Peinado elegante con trenzas finas y un moño bajo"
+    },
+    "afroShort": {
+      "label": "Afro corto",
+      "alt": "Peinado afro corto con volumen"
+    },
+    "voluminous": {
+      "label": "Voluminoso",
+      "alt": "Peinado afro rizado muy voluminoso"
+    },
+    "braids": {
+      "label": "Trenzas",
+      "alt": "Peinado con muchas trenzas apretadas"
+    },
+    "modernCut": {
+      "label": "Corte moderno",
+      "alt": "Corte corto moderno con diseños rapados en los lados"
+    }
+  },
   "services": {
   "title": "Nuestros servicios",
   "items": {

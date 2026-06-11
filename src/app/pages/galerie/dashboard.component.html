@@ -4,8 +4,16 @@
   <div class="stats">
     <div class="card" *ngFor="let item of coiffures">
       <figure class="image-card">
-        <img [src]="item.img" [alt]="item.alt">
-        <figcaption>{{ item.label }}</figcaption>
+
+        <img
+          [src]="item.img"
+          [alt]="'coiffures.' + item.key + '.alt' | translate"
+        >
+
+        <figcaption>
+          {{ 'coiffures.' + item.key + '.label' | translate }}
+        </figcaption>
+
       </figure>
     </div>
   </div>

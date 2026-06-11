@@ -8,14 +8,15 @@
       <!-- TOOLS INSIDE MENU (mobile) -->
 
   <nav class="main-nav" [class.open]="isMenuOpen">
-    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
-    <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
-    <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
+
     <a routerLink="/home" (click)="closeMenu()">{{ 'nav.home' | translate }}</a>
     <a routerLink="/services" (click)="closeMenu()">{{ 'nav.services' | translate }}</a>
     <a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
     <a routerLink="/dashboard" (click)="closeMenu()">{{ 'nav.galerie' | translate }}</a>
-    <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
+    <!-- <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
+    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
+    <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
+    <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button> -->
 
   </nav>
 

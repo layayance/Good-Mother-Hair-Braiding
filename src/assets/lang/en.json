@@ -36,6 +36,57 @@
     "copyright": "© {{year}} Good Mother Hair Braiding. All rights reserved.",
     "creator": "Created by Yayou"
   },
+  "appointment": {
+  "firstName": "First name",
+  "step1": "Personal Information",
+  "step2": "Hairstyle",
+  "appointment": "Appointment",
+  "confirmation": "Confirmation",
+
+  "hairType": "Hairstyle type",
+  "details": "Details (optional)",
+
+  "desiredDate": "Preferred date",
+  "desiredTime": "Preferred time",
+
+  "whatsappMessage": "You are about to send your request via WhatsApp.",
+  "sendToWhatsApp": "Send via WhatsApp",
+
+  "back": "Back",
+  "next": "Next",
+
+  "options": {
+    "cornrowsSimple": "Simple cornrows",
+    "cornrowsComplex": "Complex cornrows",
+    "braidsSimple": "Simple braids",
+    "braidsManyHair": "Braids (thick or long hair)",
+    "afroVolume": "Afro / high volume hair",
+    "other": "Other"
+  }
+},
+  
+  "coiffures": {
+    "elegant": {
+      "label": "Elegant",
+      "alt": "Elegant hairstyle with fine braids and a low bun"
+    },
+    "afroShort": {
+      "label": "Short Afro",
+      "alt": "Short afro hairstyle with volume"
+    },
+    "voluminous": {
+      "label": "Voluminous",
+      "alt": "Very voluminous curly afro hairstyle"
+    },
+    "braids": {
+      "label": "Braids",
+      "alt": "Hairstyle with many tight braids"
+    },
+    "modernCut": {
+      "label": "Modern cut",
+      "alt": "Short modern haircut with shaved side patterns"
+    }
+  },
   "services": {
   "title": "Our Services",
   "items": {

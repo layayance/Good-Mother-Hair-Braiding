@@ -25,19 +25,64 @@
   },
   "nav": {
     "home": "Accueil",
-    "services": "Nos Services",
+    "services": "Nos services",
     "contact": "Contact",
     "galerie": "Galerie"
   },
   "ui": {
-    "bwMode": "Noir & Blanc"
+    "bwMode": "Noir et Blanc"
   },
   "footer": {
     "copyright": "© {{year}} Good Mother Hair Braiding. Tous droits réservés.",
     "creator": "Créé par Yayou"
   },
+  "appointment": {
+    "firstName": "Prénom",
+    "step1": "Informations personnelles",
+    "step2": "Coiffure",
+    "appointment": "Rendez-vous",
+    "confirmation": "Confirmation",
+    "hairType": "Type de coiffure",
+    "details": "Détails (optionnel)",
+    "desiredDate": "Date souhaitée",
+    "desiredTime": "Heure souhaitée",
+    "whatsappMessage": "Vous êtes sur le point d'envoyer votre demande via WhatsApp.",
+    "sendToWhatsApp": "Envoyer via WhatsApp",
+    "back": "Retour",
+    "next": "Suivant",
+    "options": {
+      "cornrowsSimple": "Cornrows simples",
+      "cornrowsComplex": "Cornrows complexes",
+      "braidsSimple": "Tresses simples",
+      "braidsManyHair": "Tresses (cheveux épais ou longs)",
+      "afroVolume": "Cheveux afro / fort volume",
+      "other": "Autre"
+    }
+  },
+  "coiffures": {
+    "elegant": {
+      "label": "Élégante",
+      "alt": "Coiffure élégante avec des tresses fines et un chignon bas"
+    },
+    "afroShort": {
+      "label": "Afro court",
+      "alt": "Coiffure afro courte avec du volume"
+    },
+    "voluminous": {
+      "label": "Volumineuse",
+      "alt": "Coiffure afro très volumineuse et bouclée"
+    },
+    "braids": {
+      "label": "Tresses",
+      "alt": "Coiffure avec de nombreuses tresses serrées"
+    },
+    "modernCut": {
+      "label": "Coupe moderne",
+      "alt": "Coupe courte et moderne avec des motifs rasés sur les côtés"
+    }
+  },
   "services": {
-    "title": "Nos Services",
+    "title": "Nos services",
     "items": {
       "braids": {
         "title": "Tresses africaines",
@@ -48,7 +93,7 @@
         "description": "Ouvert, fermé, closure, frontal"
       },
       "womenKids": {
-        "title": "Coiffures femmes & enfants",
+        "title": "Coiffures femmes et enfants",
         "description": "Styles modernes et traditionnels"
       },
       "care": {
