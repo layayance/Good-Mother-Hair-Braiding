@@ -38,5 +38,15 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~5.8.3"
-  }
+  },
+  "angular": {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/good-mother-hair-braiding",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
 }
