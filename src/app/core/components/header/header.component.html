@@ -13,20 +13,20 @@
     <a routerLink="/services" (click)="closeMenu()">{{ 'nav.services' | translate }}</a>
     <a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
     <a routerLink="/dashboard" (click)="closeMenu()">{{ 'nav.galerie' | translate }}</a>
-    <!-- <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
-    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
-    <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
-    <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button> -->
-
-  </nav>
-
-    <!-- TOOLS DESKTOP ONLY -->
-  <div class="tools desktop-tools">
     <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
     <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
     <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
     <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
-  </div>
+
+  </nav>
+
+    <!-- TOOLS DESKTOP ONLY -->
+  <!-- <div class="tools desktop-tools">
+    <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
+    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
+    <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
+    <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
+  </div> -->
 
     <!-- BURGER BUTTON (mobile) -->
 
