@@ -1,104 +1,89 @@
-/* =========================
-   HEADER CONTAINER
-   ========================= */
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-
-  /* Required for absolute-positioned mobile menu */
   position: relative;
-  overflow: visible;
   z-index: 100;
+}
 
-  /* =========================
-     LEFT SIDE (LOGO + DESC)
-     ========================= */
-  .header-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    white-space: nowrap;
-  }
+/* LEFT SIDE */
+.header-left {
+  display: flex;
+  align-items: center; /* IMPORTANT: horizontal */
+  gap: 0.6rem;
+}
 
-  .logo-title {
-    margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.2;
-  }
+/* LOGO */
+.logo {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
 
-  .h-description {
-    margin: 0;
-    font-size: 0.8rem;
-    opacity: 0.9;
-  }
+.logo img {
+  width: 42px; /* 👈 contrôle taille */
+  height: 42px;
+  object-fit: cover;
+  border-radius: 10px; /* style moderne */
+}
 
-  /* =========================
-     NAVIGATION (DESKTOP)
-     ========================= */
-  .main-nav {
-    display: flex;          /* Visible on desktop */
-    gap: 1rem;
-    align-items: center;
+/* TEXT */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-      white-space: nowrap;
-    }
-  }
+.logo-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
 
-  /* =========================
-     TOOLS (LANG / MODE)
-     ========================= */
-  .tools {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    white-space: nowrap;
-  }
+.h-description {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
 
-  /* =========================
-     BURGER BUTTON
-     ========================= */
+/* NAV */
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* BURGER */
+.burger {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
   .burger {
-    display: none;          /* Hidden on desktop */
+    display: block;
   }
 
-  /* =========================
-     MOBILE MODE
-     ========================= */
-  @media (max-width: 900px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #fff8f0;
+    padding: 1rem;
+    z-index: 9999;
+  }
 
-    /* Show burger */
-    .burger {
-      display: block;
-    }
-
-    /* Hide desktop tools */
-    .tools {
-      display: none;
-    }
-
-    /* Mobile menu (hidden by default) */
-    .main-nav {
-      display: none;
-      position: absolute;
-      top: 100%;            /* Just below header */
-      left: 0;
-      right: 0;
-      width: 100%;
-      background-color: hwb(260 5% 7%);
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-      z-index: 9999;
-    }
-
-    /* When burger is clicked */
-    .main-nav.open {
-      display: flex;
-    }
+  .main-nav.open {
+    display: flex;
   }
 }

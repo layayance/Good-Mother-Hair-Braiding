@@ -1,40 +1,47 @@
 <!-- LOGO / TITLE -->
 <mat-toolbar color="accent" class="main-header">
   <div class="header-left">
-    <h1 class="logo-title">Good Mother Hair Braiding</h1>
-    <p class="h-description">{{ 'header.description' | translate}}</p>
+    <figure class="logo">
+      <img src="assets/img/gmhb.png" alt="GMHB" />
+    </figure>
+
+    <div class="brand-text">
+      <h1 class="logo-title">GMHB</h1>
+      <p class="h-description">
+        {{ "header.description" | translate }}
+      </p>
+    </div>
   </div>
 
-      <!-- TOOLS INSIDE MENU (mobile) -->
-
+  <!-- NAV -->
   <nav class="main-nav" [class.open]="isMenuOpen">
+    <a routerLink="/home" (click)="closeMenu()">{{ "nav.home" | translate }}</a>
+    <a routerLink="/services" (click)="closeMenu()">{{
+      "nav.services" | translate
+    }}</a>
+    <a routerLink="/contact" (click)="closeMenu()">{{
+      "nav.contact" | translate
+    }}</a>
+    <a routerLink="/dashboard" (click)="closeMenu()">{{
+      "nav.galerie" | translate
+    }}</a>
 
-    <a routerLink="/home" (click)="closeMenu()">{{ 'nav.home' | translate }}</a>
-    <a routerLink="/services" (click)="closeMenu()">{{ 'nav.services' | translate }}</a>
-    <a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
-    <a routerLink="/dashboard" (click)="closeMenu()">{{ 'nav.galerie' | translate }}</a>
-    <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
-    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
-    <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
-    <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
+    <button mat-button (click)="toggleGrayscale()">
+      🌓 {{ "ui.bwMode" | translate }}
+    </button>
 
+    <button mat-button (click)="switchLang('fr')">🇫🇷</button>
+    <button mat-button (click)="switchLang('en')">🇺🇸</button>
+    <button mat-button (click)="switchLang('es')">🇪🇸</button>
   </nav>
 
-    <!-- TOOLS DESKTOP ONLY -->
-  <!-- <div class="tools desktop-tools">
-    <button mat-button (click)="toggleGrayscale()">🌓 {{ 'ui.bwMode' | translate }}</button>
-    <button mat-flat-button (click)="switchLang('fr')">🇫🇷 FR</button>
-    <button mat-flat-button (click)="switchLang('en')">🇬🇧 EN</button>
-    <button mat-flat-button (click)="switchLang('es')">🇪🇸 ES</button>
-  </div> -->
-
-    <!-- BURGER BUTTON (mobile) -->
-
+  <!-- BURGER -->
   <button
     mat-icon-button
     class="burger"
     (click)="toggleMenu()"
-    aria-label="Menu" >☰
+    aria-label="Menu"
+  >
+    ☰
   </button>
- 
-</mat-toolbar> 
+</mat-toolbar>

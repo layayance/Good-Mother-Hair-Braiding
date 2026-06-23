@@ -1,109 +1,136 @@
 <mat-stepper [linear]="isLinear" #stepper>
-
   <!-- STEP 1 : Nom -->
-<mat-step [stepControl]="premierFormulaireGroupe">
-  <form [formGroup]="premierFormulaireGroupe">
-    <ng-template matStepLabel>{{ 'appointment.step1' | translate }}</ng-template>
+  <mat-step [stepControl]="premierFormulaireGroupe">
+    <form [formGroup]="premierFormulaireGroupe">
+      <ng-template matStepLabel>{{
+        "appointment.step1" | translate
+      }}</ng-template>
 
-    <mat-form-field appearance="outline">
-      <mat-label>{{ 'appointment.firstName' | translate }}</mat-label>
-      <input matInput formControlName="premierCtrl" required>
-    </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>{{ "appointment.firstName" | translate }}</mat-label>
+        <input matInput formControlName="premierCtrl" required />
+      </mat-form-field>
 
-    <button mat-button matStepperNext>{{ 'appointment.step2' | translate }}</button>
-  </form>
-</mat-step>
+      <button
+        mat-button
+        matStepperNext
+        [disabled]="premierFormulaireGroupe.invalid"
+      >
+        {{ "appointment.step2" | translate }}
+      </button>
+    </form>
+  </mat-step>
 
-<!-- STEP 2 : Rendez-vous -->
-<mat-step [stepControl]="coiffureFormGroup">
-  <form [formGroup]="coiffureFormGroup">
-    <ng-template matStepLabel>{{ 'appointment.step2' | translate }}</ng-template>
+  <!-- STEP 2 : Rendez-vous -->
+  <mat-step [stepControl]="coiffureFormGroup">
+    <form [formGroup]="coiffureFormGroup">
+      <ng-template matStepLabel>{{
+        "appointment.step2" | translate
+      }}</ng-template>
 
-    <!-- LISTE -->
-    <mat-form-field appearance="outline">
-      <mat-label>{{ 'appointment.hairType' | translate }}</mat-label>
+      <!-- LISTE -->
+      <mat-form-field appearance="outline">
+        <mat-label>{{ "appointment.hairType" | translate }}</mat-label>
 
-      <mat-select formControlName="type" required>
-        <mat-option value="Nattes collées simples">
-          {{ 'appointment.options.cornrowsSimple' | translate }}
-        </mat-option>
+        <mat-select formControlName="type" required>
+          <mat-option value="Nattes collées simples">
+            {{ "appointment.options.cornrowsSimple" | translate }}
+          </mat-option>
 
-        <mat-option value="Nattes collées complexes">
-          {{ 'appointment.options.cornrowsComplex' | translate }}
-        </mat-option>
+          <mat-option value="Nattes collées complexes">
+            {{ "appointment.options.cornrowsComplex" | translate }}
+          </mat-option>
 
-        <mat-option value="Tresses simples">
-          {{ 'appointment.options.braidsSimple' | translate }}
-        </mat-option>
+          <mat-option value="Tresses simples">
+            {{ "appointment.options.braidsSimple" | translate }}
+          </mat-option>
 
-        <mat-option value="Tresses (beaucoup de cheveux)">
-          {{ 'appointment.options.braidsManyHair' | translate }}
-        </mat-option>
+          <mat-option value="Tresses (beaucoup de cheveux)">
+            {{ "appointment.options.braidsManyHair" | translate }}
+          </mat-option>
 
-        <mat-option value="Afro / volume important">
-          {{ 'appointment.options.afroVolume' | translate }}
-        </mat-option>
+          <mat-option value="Afro / volume important">
+            {{ "appointment.options.afroVolume" | translate }}
+          </mat-option>
 
-        <mat-option value="Autre">
-          {{ 'appointment.options.other' | translate }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+          <mat-option value="Autre">
+            {{ "appointment.options.other" | translate }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
 
-    <!-- OPTIONNEL -->
-    <mat-form-field appearance="outline">
-      <mat-label>{{ 'appointment.details' | translate }}</mat-label>
-      <textarea matInput formControlName="details"></textarea>
-    </mat-form-field>
+      <!-- OPTIONNEL -->
+      <mat-form-field appearance="outline">
+        <mat-label>{{ "appointment.details" | translate }}</mat-label>
+        <textarea matInput formControlName="details"></textarea>
+      </mat-form-field>
 
-    <button mat-button matStepperPrevious>
-      {{ 'appointment.back' | translate }}
-    </button>
+      <button
+        mat-button
+        matStepperPrevious
+        [disabled]="coiffureFormGroup.invalid"
+      >
+        {{ "appointment.back" | translate }}
+      </button>
 
-    <button mat-button matStepperNext>
-      {{ 'appointment.next' | translate }}
-    </button>
-  </form>
-</mat-step>
+      <button mat-button matStepperNext [disabled]="coiffureFormGroup.invalid">
+        {{ "appointment.next" | translate }}
+      </button>
+    </form>
+  </mat-step>
 
-<!-- STEP 3 : Rendez-vous -->
-<mat-step [stepControl]="rdvFormGroup">
-  <form [formGroup]="rdvFormGroup">
-    <ng-template matStepLabel>{{ 'appointment.appointment' | translate }}</ng-template>
+  <!-- STEP 3 : Rendez-vous -->
+  <mat-step [stepControl]="rdvFormGroup">
+    <form [formGroup]="rdvFormGroup">
+      <ng-template matStepLabel>{{
+        "appointment.appointment" | translate
+      }}</ng-template>
 
-    <!-- Date -->
-    <mat-form-field appearance="outline" class="example-full-width">
-      <mat-label>{{ 'appointment.desiredDate' | translate }}</mat-label>
-      <input matInput [matDatepicker]="picker" formControlName="date" required>
-      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
+      <!-- Date -->
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>{{ "appointment.desiredDate" | translate }}</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="date"
+          required
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
 
-    <!-- Heure -->
-    <mat-form-field appearance="outline" class="example-full-width">
-      <mat-label>{{ 'appointment.desiredTime' | translate }}</mat-label>
-      <input matInput type="time" formControlName="heure" required>
-    </mat-form-field>
+      <!-- Heure -->
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>{{ "appointment.desiredTime" | translate }}</mat-label>
+        <input matInput type="time" formControlName="heure" required />
+      </mat-form-field>
 
-    <button mat-button matStepperPrevious>{{ 'appointment.back' | translate }}</button>
-    <button mat-button matStepperNext>{{ 'appointment.next' | translate }}</button>
-  </form>
-</mat-step>
+      <button mat-button matStepperPrevious [disabled]="rdvFormGroup.invalid">
+        {{ "appointment.back" | translate }}
+      </button>
+      <button mat-button matStepperNext [disabled]="rdvFormGroup.invalid">
+        {{ "appointment.next" | translate }}
+      </button>
+    </form>
+  </mat-step>
 
   <!-- STEP 4 : Done -->
   <mat-step>
-  <ng-template matStepLabel>{{ 'appointment.confirmation' | translate }}</ng-template>
+    <ng-template matStepLabel>{{
+      "appointment.confirmation" | translate
+    }}</ng-template>
 
-  <p>{{ 'appointment.whatsappMessage' | translate }}</p>
+    <p>{{ "appointment.whatsappMessage" | translate }}</p>
 
-  <button mat-button matStepperPrevious>{{ 'appointment.back' | translate }}</button>
+    <button mat-button matStepperPrevious [disabled]="rdvFormGroup.invalid">
+      {{ "appointment.back" | translate }}
+    </button>
 
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="sendToWhatsApp()">
-    {{ 'appointment.sendToWhatsApp' | translate }}
-  </button>
-</mat-step>
-
+    <button mat-raised-button color="primary" (click)="sendToWhatsApp()">
+      {{ "appointment.sendToWhatsApp" | translate }}
+    </button>
+  </mat-step>
 </mat-stepper>

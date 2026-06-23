@@ -49,7 +49,7 @@ export class ContactComponent {
     return '';
   };
 
-  isLinear = false;
+  isLinear = true;
 
   // // Génère le message et ouvre WhatsApp avec les informations du formulaire
   // sendToWhatsApp() {
