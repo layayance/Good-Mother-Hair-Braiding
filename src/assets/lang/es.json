@@ -65,6 +65,11 @@
     "other": "Otro"
   }
 },
+"contact": {
+  "subtitle": "Salón de trenzas afro en Trenton",
+  "appointmentOnly": "Con cita previa",
+  "bookWhatsapp": "Reservar por WhatsApp"
+},
   "coiffures": {
     "elegant": {
       "label": "Elegante",

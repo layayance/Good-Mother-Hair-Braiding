@@ -64,6 +64,11 @@
     "other": "Other"
   }
 },
+"contact": {
+  "subtitle": "Afro hair braiding salon in Trenton",
+  "appointmentOnly": "By appointment only",
+  "bookWhatsapp": "Book on WhatsApp"
+},
   
   "coiffures": {
     "elegant": {

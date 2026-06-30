@@ -59,6 +59,11 @@
       "other": "Autre"
     }
   },
+  "contact": {
+  "subtitle": "Salon de coiffure afro à Trenton",
+  "appointmentOnly": "Sur rendez-vous",
+  "bookWhatsapp": "Réserver sur WhatsApp"
+},
   "coiffures": {
     "elegant": {
       "label": "Élégante",
