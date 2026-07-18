@@ -1,3 +1,15 @@
+// Styles for the app component
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
 // Responsive : si écran < 600px
 @media (max-width: 600px) {
   .main-header {
