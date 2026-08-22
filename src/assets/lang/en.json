@@ -16,7 +16,8 @@
     },
     "location": {
       "title": "Find us",
-      "address": "208 Perry St, Trenton"
+      "address": "208 Perry St, Trenton, NJ 08618",
+      "description": "Visit our Trenton hair braiding salon for box braids, knotless braids, cornrows, weaves and natural hair care. Appointments are available through WhatsApp."
     }
   },
   "header": {
@@ -68,7 +69,7 @@
   }
 },
 "contact": {
-  "subtitle": "Afro hair braiding salon in Trenton",
+  "subtitle": "African hair braiding salon in Trenton, New Jersey",
   "primaryPhone": "Primary",
   "secondaryPhone": "Secondary",
   "francePhone": "France",
