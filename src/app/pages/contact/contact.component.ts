@@ -51,53 +51,28 @@ export class ContactComponent {
 
   isLinear = true;
 
-  // // Génère le message et ouvre WhatsApp avec les informations du formulaire
-  // sendToWhatsApp() {
-  //   // Numéro WhatsApp du salon (format international obligatoire)
-  //   const phoneNumber = '759236988'; // format international WhatsApp
-
-  //   const nom = this.premierFormulaireGroupe.value.premierCtrl;
-  //   const coiffure = this.coiffureFormGroup.value.type;
-  //   const details = this.coiffureFormGroup.value.details || 'Aucun détail';
-  //   const date = this.rdvFormGroup.value.date;
-  //   const heure = this.rdvFormGroup.value.heure;
-
-  //   // Message envoyé automatiquement sur WhatsApp
-  //   const message = `Bonjour 👋\n\nJe m'appelle ${nom}.\n\nJe souhaite prendre contact avec Good Mother Hair Braiding.\n\nCoiffure : 
-  //   ${coiffure}\nDétails : ${details}\nDate souhaitée : ${date} à ${heure}`;
-    
-
-  //   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  //   window.open(url, '_blank');
-  // }
   sendToWhatsApp() {
-  const phoneNumbers = [
-    '16095107489',
-    '16316127008',
-    '33759236988'
-  ];
+  const primaryPhoneNumber = '16095107489';
 
-  const nom = this.premierFormulaireGroupe.value.premierCtrl;
-  const coiffure = this.coiffureFormGroup.value.type;
-  const details = this.coiffureFormGroup.value.details || 'Aucun détail';
+  const name = this.premierFormulaireGroupe.value.premierCtrl;
+  const hairstyle = this.coiffureFormGroup.value.type;
+  const details = this.coiffureFormGroup.value.details || 'No additional details';
   const date = this.rdvFormGroup.value.date;
-  const heure = this.rdvFormGroup.value.heure;
+  const time = this.rdvFormGroup.value.heure;
 
-  const message = `Bonjour 👋
+  const message = `Hello 👋
 
-Je m'appelle ${nom}.
+My name is ${name}.
 
-Je souhaite prendre contact avec Good Mother Hair Braiding.
+I would like to book an appointment with Good Mother Hair Braiding.
 
-Coiffure : ${coiffure}
-Détails : ${details}
-Date souhaitée : ${date} à ${heure}`;
+Hairstyle: ${hairstyle}
+Details: ${details}
+Preferred date: ${date} at ${time}`;
 
-  phoneNumbers.forEach(number => {
-    window.open(
-      `https://wa.me/${number}?text=${encodeURIComponent(message)}`,
-      '_blank'
-    );
-  });
+  window.open(
+    `https://wa.me/${primaryPhoneNumber}?text=${encodeURIComponent(message)}`,
+    '_blank'
+  );
 }
 }

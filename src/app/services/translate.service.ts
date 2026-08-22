@@ -10,8 +10,8 @@ export class TranslateAppService {
   }
 
   init() {
-    this.translate.setDefaultLang('fr');
-    this.translate.use('fr');
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 
   switchLang(lang: string) {

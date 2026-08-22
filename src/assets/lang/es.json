@@ -33,6 +33,9 @@
   "ui": {
     "bwMode": "Modo blanco y negro"
   },
+  "gallery": {
+    "title": "Nuestros estilos populares"
+  },
   "footer": {
     "copyright": "© {{year}} Good Mother Hair Braiding. Todos los derechos reservados.",
     "creator": "Creado por Yayou"
@@ -67,6 +70,9 @@
 },
 "contact": {
   "subtitle": "Salón de trenzas afro en Trenton",
+  "primaryPhone": "Principal",
+  "secondaryPhone": "Secundario",
+  "francePhone": "Francia",
   "appointmentOnly": "Con cita previa",
   "bookWhatsapp": "Reservar por WhatsApp"
 },

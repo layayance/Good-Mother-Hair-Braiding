@@ -33,27 +33,27 @@
         <mat-label>{{ "appointment.hairType" | translate }}</mat-label>
 
         <mat-select formControlName="type" required>
-          <mat-option value="Nattes collées simples">
+          <mat-option value="Simple cornrows">
             {{ "appointment.options.cornrowsSimple" | translate }}
           </mat-option>
 
-          <mat-option value="Nattes collées complexes">
+          <mat-option value="Complex cornrows">
             {{ "appointment.options.cornrowsComplex" | translate }}
           </mat-option>
 
-          <mat-option value="Tresses simples">
+          <mat-option value="Simple braids">
             {{ "appointment.options.braidsSimple" | translate }}
           </mat-option>
 
-          <mat-option value="Tresses (beaucoup de cheveux)">
+          <mat-option value="Braids (thick or long hair)">
             {{ "appointment.options.braidsManyHair" | translate }}
           </mat-option>
 
-          <mat-option value="Afro / volume important">
+          <mat-option value="Afro / high-volume hair">
             {{ "appointment.options.afroVolume" | translate }}
           </mat-option>
 
-          <mat-option value="Autre">
+          <mat-option value="Other">
             {{ "appointment.options.other" | translate }}
           </mat-option>
         </mat-select>
@@ -146,7 +146,17 @@
 
   <div class="info-line">
     <span class="icon">📞</span>
-    <span>+1 609 510 7489</span>
+    <span>{{ "contact.primaryPhone" | translate }}: +1 (609) 510-7489</span>
+  </div>
+
+  <div class="info-line">
+    <span class="icon">📞</span>
+    <span>{{ "contact.secondaryPhone" | translate }}: +1 (631) 612-7008</span>
+  </div>
+
+  <div class="info-line">
+    <span class="icon">🇫🇷</span>
+    <span>{{ "contact.francePhone" | translate }}: +33 6 65 21 68 03</span>
   </div>
 
   <div class="info-line">
