@@ -42,7 +42,7 @@
   },
   "angular": {
     "buildCommand": "npm run build",
-    "outputDirectory": "dist/good-mother-hair-braiding",
+    "outputDirectory": "dist/good-mother-hair-braiding/browser",
     "rewrites": [
       {
         "source": "/(.*)",
