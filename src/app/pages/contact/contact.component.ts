@@ -5,6 +5,10 @@ import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { StepperOrientation } from '@angular/material/stepper';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
 
 /** @title Datepicker with custom date classes */
 
@@ -18,6 +22,14 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 })
 export class ContactComponent {
   private fb = inject(FormBuilder);
+  private breakpointObserver = inject(BreakpointObserver);
+
+  stepperOrientation = toSignal(
+    this.breakpointObserver.observe('(min-width: 769px)').pipe(
+      map(({ matches }): StepperOrientation => matches ? 'horizontal' : 'vertical')
+    ),
+    { initialValue: 'vertical' as StepperOrientation }
+  );
 
   // ÉTAPE 1 — Informations client (nom)
   premierFormulaireGroupe = this.fb.group({

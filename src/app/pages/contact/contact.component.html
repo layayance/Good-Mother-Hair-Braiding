@@ -5,7 +5,11 @@
   </header>
 
   <div class="booking-grid">
-<mat-stepper [linear]="isLinear" #stepper>
+<mat-stepper
+  [linear]="isLinear"
+  [orientation]="stepperOrientation()"
+  #stepper
+>
   <!-- STEP 1 : Nom -->
   <mat-step [stepControl]="premierFormulaireGroupe">
     <form [formGroup]="premierFormulaireGroupe">
