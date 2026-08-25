@@ -18,8 +18,19 @@ export class HeaderComponent {
   switchLang(lang: 'fr' | 'en' | 'es'){
     this.translate.use(lang);
   }
+
+  switchLangAndCloseMenu(lang: 'fr' | 'en' | 'es') {
+    this.switchLang(lang);
+    this.closeMenu();
+  }
+
   toggleGrayscale(){
     this.themeService.toggleGrayscale();
+  }
+
+  toggleGrayscaleAndCloseMenu() {
+    this.toggleGrayscale();
+    this.closeMenu();
   }
 
   currentLang = this.translate.currentLang;

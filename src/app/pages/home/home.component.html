@@ -1,31 +1,47 @@
 <section class="hero">
-<h1>Good Mother Hair Braiding Salon in Trenton, NJ</h1>
-  <p class="subtitle">
-    {{ 'home.subtitle' | translate }}
-  </p>
+  <div class="hero-copy">
+    <p class="eyebrow">TRENTON, NEW JERSEY · EST. 1997</p>
+    <h1>Good Mother <em>Hair Braiding</em></h1>
+    <p class="subtitle">{{ 'home.subtitle' | translate }}</p>
 
-  <div class="hero-buttons">
-    <a routerLink="/services" class="btn primary">
-      {{ 'home.cta.services' | translate }}
-    </a>
-    <a routerLink="/contact" class="btn secondary">
-      {{ 'home.cta.contact' | translate }}
-    </a>
+    <div class="hero-buttons">
+      <a routerLink="/contact" class="btn primary">{{ 'home.cta.contact' | translate }}</a>
+      <a routerLink="/services" class="btn secondary">{{ 'home.cta.services' | translate }}</a>
+    </div>
+
+    <div class="hero-note">
+      <span>208 Perry St</span>
+      <span>Trenton, NJ 08618</span>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="gold-orbit"></div>
+    <img src="assets/img/gmhb.png" alt="Good Mother Hair Braiding salon in Trenton" />
+    <div class="hero-badge"><strong>Beauty</strong><span>Care · Confidence</span></div>
   </div>
 </section>
 
 <section class="about">
-  <h2>{{ 'home.why.title' | translate }}</h2>
+  <div class="section-heading">
+    <span>THE GOOD MOTHER EXPERIENCE</span>
+    <h2>{{ 'home.why.title' | translate }}</h2>
+  </div>
   <div class="features">
-    <div>💇‍♀️ {{ 'home.why.feature1' | translate }}</div>
-    <div>✨ {{ 'home.why.feature2' | translate }}</div>
-    <div>🤝 {{ 'home.why.feature3' | translate }}</div>
-    <div>💰 {{ 'home.why.feature4' | translate }}</div>
+    <article><span>01</span><h3>{{ 'home.why.feature1' | translate }}</h3></article>
+    <article><span>02</span><h3>{{ 'home.why.feature2' | translate }}</h3></article>
+    <article><span>03</span><h3>{{ 'home.why.feature3' | translate }}</h3></article>
+    <article><span>04</span><h3>{{ 'home.why.feature4' | translate }}</h3></article>
   </div>
 </section>
 
 <section class="location">
-  <h2>{{ 'home.location.title' | translate }}</h2>
-  <p>📍 {{ 'home.location.address' | translate }}</p>
-  <p>{{ 'home.location.description' | translate }}</p>
+  <div>
+    <span class="location-kicker">VISIT OUR SALON</span>
+    <h2>{{ 'home.location.title' | translate }}</h2>
+    <p class="address">📍 {{ 'home.location.address' | translate }}</p>
+    <p>{{ 'home.location.description' | translate }}</p>
+    <a routerLink="/contact">{{ 'home.cta.contact' | translate }} <span>→</span></a>
+  </div>
+  <img src="assets/img/tresse.jpeg" alt="Professional braids by Good Mother Hair Braiding" />
 </section>

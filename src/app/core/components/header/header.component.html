@@ -14,7 +14,16 @@
   </div>
 
   <!-- NAV -->
-  <nav class="main-nav" [class.open]="isMenuOpen">
+  <nav id="main-navigation" class="main-nav" [class.open]="isMenuOpen">
+    <button
+      mat-icon-button
+      class="close-menu"
+      (click)="closeMenu()"
+      aria-label="Close menu"
+    >
+      ✕
+    </button>
+
     <a routerLink="/home" (click)="closeMenu()">{{ "nav.home" | translate }}</a>
     <a routerLink="/services" (click)="closeMenu()">{{
       "nav.services" | translate
@@ -26,13 +35,13 @@
       "nav.galerie" | translate
     }}</a>
 
-    <button mat-button (click)="toggleGrayscale()">
+    <button mat-button (click)="toggleGrayscaleAndCloseMenu()">
       🌓 {{ "ui.bwMode" | translate }}
     </button>
 
-    <button mat-button (click)="switchLang('fr')">🇫🇷</button>
-    <button mat-button (click)="switchLang('en')">🇺🇸</button>
-    <button mat-button (click)="switchLang('es')">🇪🇸</button>
+    <button mat-button (click)="switchLangAndCloseMenu('fr')" aria-label="Français">🇫🇷</button>
+    <button mat-button (click)="switchLangAndCloseMenu('en')" aria-label="English">🇺🇸</button>
+    <button mat-button (click)="switchLangAndCloseMenu('es')" aria-label="Español">🇪🇸</button>
   </nav>
 
   <!-- BURGER -->
@@ -41,6 +50,8 @@
     class="burger"
     (click)="toggleMenu()"
     aria-label="Menu"
+    aria-controls="main-navigation"
+    [attr.aria-expanded]="isMenuOpen"
   >
     ☰
   </button>

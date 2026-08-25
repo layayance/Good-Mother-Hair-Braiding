@@ -1,20 +1,22 @@
 <div class="coiffures">
-  <h1 class="title">{{ 'gallery.title' | translate }} ✨</h1>
+  <header>
+    <span>OUR WORK</span>
+    <h1 class="title">{{ 'gallery.title' | translate }}</h1>
+  </header>
 
   <div class="stats">
-    <div class="card" *ngFor="let item of coiffures">
+    <article class="card" *ngFor="let item of coiffures; let i = index">
       <figure class="image-card">
-
         <img
           [src]="item.img"
           [alt]="'coiffures.' + item.key + '.alt' | translate"
         >
 
         <figcaption>
+          <span>0{{ i + 1 }}</span>
           {{ 'coiffures.' + item.key + '.label' | translate }}
         </figcaption>
-
       </figure>
-    </div>
+    </article>
   </div>
 </div>
